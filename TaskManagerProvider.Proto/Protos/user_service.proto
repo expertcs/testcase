@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option csharp_namespace = "TaskManagerProvider.Protos";
+
+import "user.proto";
+
+package dataservice;
+
+// Методы для работы с пользователями
+service UserService {  
+  rpc GetUsers (GetUsersRequest) returns (stream User);
+  rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse);
+  rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+  rpc UpdateUser (UpdateUserRequest) returns (UpdateUserResponse);
+  rpc DeleteUser (DeleteUserRequest) returns (DeleteUserResponse);
+}
+
+// Запросы и ответы для пользователей
+message GetUsersRequest {}
+message GetUsersResponse {
+  repeated User users = 1;
+}
+
+message GetUserByIdRequest {
+  int32 id = 1;
+}
+message GetUserByIdResponse {
+  optional User user = 1;
+}
+
+message CreateUserRequest {
+  User user = 1;
+}
+message CreateUserResponse {
+  User user = 1;
+}
+
+message UpdateUserRequest {
+  User user = 1;
+}
+message UpdateUserResponse {
+  optional User user = 1;
+}
+
+message DeleteUserRequest {
+  int32 id = 1;
+}
+message DeleteUserResponse {
+}

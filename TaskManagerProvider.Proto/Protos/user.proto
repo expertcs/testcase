@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "TaskManagerProvider.Protos";
+
+package dataservice;
+
+// The request message containing the user's name.
+message User {
+  int32 id = 1;
+  string name = 2;
+}

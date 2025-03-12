@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "TaskManagerProvider": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59579;http://localhost:59580"
+    }
+  }
+}

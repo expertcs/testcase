@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "TaskManagerProvider.Protos";
+
+import "user.proto";
+
+package dataservice;
+
+enum TaskState{
+  TASK_STATE_NEW = 0;
+  TASK_STATE_IN_PROGRESS = 1;
+  TASK_STATE_CLOSE = 2;
+}
+
+// Сообщение для задачи
+message TaskItem {
+  int32 id = 1;
+  string name = 2;
+  int32 user_id = 3;
+  TaskState state = 4;
+  User user = 5;
+}
