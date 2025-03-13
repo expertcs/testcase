@@ -1,4 +1,4 @@
-syntax = "proto3";
+п»їsyntax = "proto3";
 
 option csharp_namespace = "TaskManagerProvider.Protos";
 
@@ -6,7 +6,7 @@ import "user.proto";
 
 package dataservice;
 
-// Методы для работы с пользователями
+// РњРµС‚РѕРґС‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏРјРё
 service UserService {  
   rpc GetUsers (GetUsersRequest) returns (stream User);
   rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse);
@@ -15,7 +15,7 @@ service UserService {
   rpc DeleteUser (DeleteUserRequest) returns (DeleteUserResponse);
 }
 
-// Запросы и ответы для пользователей
+// Р—Р°РїСЂРѕСЃС‹ Рё РѕС‚РІРµС‚С‹ РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
 message GetUsersRequest {}
 message GetUsersResponse {
   repeated User users = 1;

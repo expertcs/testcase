@@ -1,4 +1,4 @@
-syntax = "proto3";
+п»їsyntax = "proto3";
 
 option csharp_namespace = "TaskManagerProvider.Protos";
 
@@ -12,7 +12,7 @@ enum TaskState{
   TASK_STATE_CLOSE = 2;
 }
 
-// Сообщение для задачи
+// РЎРѕРѕР±С‰РµРЅРёРµ РґР»СЏ Р·Р°РґР°С‡Рё
 message TaskItem {
   int32 id = 1;
   string name = 2;

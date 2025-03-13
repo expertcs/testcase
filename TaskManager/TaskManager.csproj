@@ -7,26 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Protos\task_item.proto" />
-    <None Remove="Protos\task_item_service.proto" />
-    <None Remove="Protos\user.proto" />
-    <None Remove="Protos\user_service.proto" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
     <PackageReference Include="System.Linq.Async" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TaskManagerProvider.Proto\TaskManagerProvider.Proto.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Protobuf Include="Protos\task_item.proto" GrpcServices="Client" ProtoRoot="Protos\" />
-    <Protobuf Include="Protos\task_item_service.proto" GrpcServices="Client" ProtoRoot="Protos\" />
-    <Protobuf Include="Protos\user.proto" GrpcServices="Client" ProtoRoot="Protos\" />
-    <Protobuf Include="Protos\user_service.proto" GrpcServices="Client" ProtoRoot="Protos\" />
   </ItemGroup>
 
 </Project>

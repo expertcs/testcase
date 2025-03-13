@@ -8,14 +8,11 @@
   </PropertyGroup>
     
   <ItemGroup>
-    <ProjectReference Include="..\TaskManagerProvider.Proto\TaskManagerProvider.Proto.csproj" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
   </ItemGroup>
-
+    
   <ItemGroup>
-    <Protobuf Include="Protos\task_item.proto" GrpcServices="Server" ProtoRoot="Protos\" />
-    <Protobuf Include="Protos\task_item_service.proto" ProtoRoot="Protos\" />
-    <Protobuf Include="Protos\user_service.proto" GrpcServices="Server" ProtoRoot="Protos\" />
-    <Protobuf Include="Protos\user.proto" GrpcServices="Server" ProtoRoot="Protos\" />
+    <ProjectReference Include="..\TaskManagerProvider.Proto\TaskManagerProvider.Proto.csproj" />
   </ItemGroup>
 
 </Project>
